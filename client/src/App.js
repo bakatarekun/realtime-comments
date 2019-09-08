@@ -40,7 +40,8 @@ class App extends Component {
   };
 
   vote = (id, num) => {
-    axios.post('http://localhost:5000/vote', {
+    //axios.post('http://localhost:5000/vote', {
+      axios.post('https://realtime-comments.herokuapp.com/', {
       id,
       vote: num,
     });
@@ -53,7 +54,8 @@ class App extends Component {
     });
 
     axios
-      .get('http://localhost:5000')
+      //.get('http://localhost:5000')
+      .get('https://realtime-comments.herokuapp.com/')
       .then(({ data }) => {
         this.setState({
           comments: [...data],
