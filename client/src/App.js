@@ -29,8 +29,8 @@ class App extends Component {
     };
 
        axios
-     // .post('http://localhost:5000/comment', data)
-     .post('https://realtime-comments.herokuapp.com/', data)
+     .post('http://localhost:5000/comment', data)
+    //  .post('https://realtime-comments.herokuapp.com/', data)
       .then(() => {
         this.setState({
           username: '',
@@ -41,8 +41,8 @@ class App extends Component {
   };
 
   vote = (id, num) => {
-    //axios.post('http://localhost:5000/vote', {
-      axios.post('https://realtime-comments.herokuapp.com/', {
+    axios.post('http://localhost:5000/vote', {
+      // axios.post('https://realtime-comments.herokuapp.com/', {
       id,
       vote: num,
     });
@@ -55,8 +55,8 @@ class App extends Component {
     });
 
     axios
-      //.get('http://localhost:5000')
-      .get('https://realtime-comments.herokuapp.com/')
+      .get('http://localhost:5000')
+      // .get('https://realtime-comments.herokuapp.com/')
       .then(({ data }) => {
         this.setState({
           comments: [...data],
