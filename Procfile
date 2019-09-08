@@ -1,3 +1,3 @@
-web: node index.js
-web: cd client
-web: npm start
+web: node server.js
+ cd client
+ npm start
