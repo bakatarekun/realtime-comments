@@ -29,7 +29,8 @@ class App extends Component {
     };
 
        axios
-      .post('http://localhost:5000/comment', data)
+     // .post('http://localhost:5000/comment', data)
+     .post('https://realtime-comments.herokuapp.com/, data)
       .then(() => {
         this.setState({
           username: '',
