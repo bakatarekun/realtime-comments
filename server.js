@@ -34,7 +34,8 @@ app.get('/', (req, res) => {
 app.post('/comment', (req, res) => {
   db.insert(Object.assign({}, req.body), (err, newComment) => {
     if (err) {
-      return res.status(500).send(err);
+      // return res.status(500).send(err);
+      return res.status(500).send("Erro is thrown");
     }
 
     pusher.trigger('comments', 'new-comment', {
