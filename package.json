@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "\"npm run server\" \"npm run client\"",
     "server": "node server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently  \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --preifx client && npm run build --prefix client"
     
-    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
