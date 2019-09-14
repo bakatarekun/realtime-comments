@@ -15,10 +15,7 @@ const pusher = new Pusher({
   key: process.env.PUSHER_APP_KEY,
   secret: process.env.PUSHER_APP_SECRET,
   cluster: process.env.PUSHER_APP_CLUSTER,
-// appId: "857698",
-// key:  "45130ba5bffaf472ebd5",
-// secret: "31b9089c05f96473d99d",
-// cluster: "us2",
+
   useTLS: true,
 });
 
@@ -64,7 +61,7 @@ app.post('/vote', (req, res) => {
     });
   });
 });
-
+//comments
 app.set('port', process.env.PORT || 5000);
 const server = app.listen(app.get('port'), () => {
   console.log(`Express running → PORT ${server.address().port}`);
